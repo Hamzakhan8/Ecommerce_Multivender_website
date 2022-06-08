@@ -36,7 +36,7 @@
 						<div class="hover">
 							<h4>Already Have An Account</h4>
 							<p>Click Below To Log In</p>
-							<a class="main_btn" href="{{url('login')}}">LOG IN </a>
+							<a class="main_btn" href="{{ route('home.login.page') }}">LOG IN </a>
 						</div>
 					</div>
 				</div>
@@ -64,9 +64,9 @@
 							</div>
 							<div class="col-md-12 form-group">
 								<input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Enter The Same Password Again">
-								<!-- jab b form banana hain to in cheezo ka khyal lazman rako 
+								<!-- jab b form banana hain to in cheezo ka khyal lazman rako
 								1 oper action me link check karo
-								2 har input ki id dalna zarrori hain 
+								2 har input ki id dalna zarrori hain
 								3 har input ka name hona zarori hain
 								4 password field ka confirm password field banana zarori hain kher hain agar id ya name change ho
 								 -->
@@ -118,4 +118,3 @@
 
 			@include('front-end/partials/js-file')
 
-			

@@ -36,7 +36,7 @@
 						aur yaha khud ba khud ek nav ban jayega -->
 						@guest
 						<li id="logreg">
-							<a href="{{url('login')}}">
+							<a href="{{ route('home.login.page') }}">
 								Login/Register
 							</a>
 						</li>

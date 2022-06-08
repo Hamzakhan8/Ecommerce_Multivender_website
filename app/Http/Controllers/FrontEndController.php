@@ -136,7 +136,7 @@ class FrontEndController extends Controller
         $request->validate([
             'shipping_address' => 'required'
         ]);
-        
+
         Stripe::setApiKey(env('STRIPE_SECRET_KEY', 'sk_test_UiXMthbODOoySnaB2lz4WEgu00xJhQqFiE'));
         // u can do same as create([]) or create(array()) both are array
         $customer = Customer::create(array(
@@ -152,7 +152,7 @@ class FrontEndController extends Controller
         ));
 
 
-        
+
         foreach (Cart::content() as $cart) {
 
             Order::create([
@@ -249,11 +249,28 @@ class FrontEndController extends Controller
 
     public function index()
     {
-
         $category = Category::all();
         $products = Product::Paginate(5);
         $user = User::where('role',2)->get();
         return view('front-end.index.index',compact('user','products','category'));
+    }
+
+    /**
+     * Show the login page
+     * @return View
+     */
+    public function showLogin() {
+
+        return view('front-end.login.login');
+    }
+
+    /**
+     * Show the Register page
+     * @return View
+     */
+    public function showRegister() {
+
+        return view('front-end.register.register');
     }
 
     public function shopProducts($id)

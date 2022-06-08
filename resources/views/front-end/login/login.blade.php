@@ -35,7 +35,7 @@
 						<div class="hover">
 							<h4>New to our Webiste </h4>
 							<p>There are advances being made in science and technology everyday, and a good example of this is the</p>
-							<a class="main_btn" href="{{url('register')}}">Create an Account</a>
+							<a class="main_btn" href="{{ route('home.register.page') }}">Create an Account</a>
 						</div>
 					</div>
 				</div>
@@ -67,8 +67,8 @@
 								<button type="submit" value="submit" class="btn submit_btn">Log In</button>
 								<a href="#">Forgot Password?</a>
 							</div>
-							
-							
+
+
 						</form>
 					</div>
 				</div>

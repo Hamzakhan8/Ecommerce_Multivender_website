@@ -44,10 +44,13 @@ return view('user-dashboard/layouts/master');
 });
 
 
+// Auth routes
 Auth::routes();
 
 // front end home index page
 Route::get('/home/page', 'FrontEndController@index')->name('home.page');
+Route::get('/home/login/page', 'FrontEndController@showLogin')->name('home.login.page');
+Route::get('/home/register/page', 'FrontEndController@showRegister')->name('home.register.page');
 Route::get('/', 'FrontEndController@index');
 
 // ========================== RSOURCE CONTROLLER  ===========================================================
