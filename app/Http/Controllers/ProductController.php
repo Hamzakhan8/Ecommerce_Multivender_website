@@ -9,8 +9,10 @@ use App\Category;
 use App\Comment;
 use App\Http\Requests\ProductCreateRequest;
 use App\Subcategory;
-use Storage;
-use Auth;
+use Illuminate\Support\Facades\Storage;
+
+use Illuminate\Support\Facades\Auth;
+
 
 
 
@@ -23,15 +25,15 @@ class ProductController extends Controller
      */
     public function index()
     {
-        if (auth()->user()->role==1) 
+        if (auth()->user()->role==1)
         {
         $products = Product::all();
         }
-        elseif (auth()->user()->role==2) 
+        elseif (auth()->user()->role==2)
         {
         $products = Product::where('user_id',auth()->user()->id)->get();
         }
-       
+
         return view('admin-dashboard.product-management.all-products', compact('products'));
     }
 
@@ -46,7 +48,7 @@ class ProductController extends Controller
         $categories = Category::all();
         // $subcategories = Subcategory::all();
 
-        return view('admin-dashboard/product-management/create-product-form', compact('brands','categories'));   
+        return view('admin-dashboard/product-management/create-product-form', compact('brands','categories'));
     }
 
     /**
@@ -71,10 +73,10 @@ class ProductController extends Controller
             'price' => $request->price,
             'city' => Auth::user()->city,
             'image_path' => $fileName,
-            'user_id' =>  Auth::user()->id, 
-            ]);       
+            'user_id' =>  Auth::user()->id,
+            ]);
         }
-      return redirect()->route('product.index')->with('success','product has been successfully added');   
+      return redirect()->route('product.index')->with('success','product has been successfully added');
     }
 
     /**
@@ -119,7 +121,7 @@ class ProductController extends Controller
         $product->subcategory_id = $request->subcategory;
         $product->category_id    = $request->category;
         $product->price = $request->price;
-        
+
         $product->save();
 
         if ($request->hasFile('image')) {
@@ -149,8 +151,8 @@ class ProductController extends Controller
 
     public function CategoryAjax($id){
     $sub = Subcategory::where('category_id', $id)->get();
-        
-    
+
+
     if($sub)
     { return $sub; }
     else{ return 'aaa'; }

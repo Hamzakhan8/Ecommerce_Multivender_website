@@ -15,11 +15,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 
-Route::get('/clear-cache', function() {
-    $exitCode = Artisan::call('cache:clear');
-    // return what you want
-});
-
 Route::resource('article','ArticleController');
 Route::get('article/{id}','ArticleController@show');
 Route::get('article/create','ArticleController@create');

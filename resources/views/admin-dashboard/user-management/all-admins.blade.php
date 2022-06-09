@@ -1,4 +1,4 @@
-@extends('admin-dashboard/layouts/master')
+oho@extends('admin-dashboard/layouts/master')
 <title>All Admins </title>
 @section('main-contents')
 
@@ -9,7 +9,7 @@
     	<span aria-hidden="true">&times;</span>
   	</button>
 </div>
-@endif	
+@endif
 		<div class="container-fluid">
 			<div class="row mb-2 ml-1 text-light font-weight-bold">
 				<a class="btn btn-primary" href="{{route('user.create')}}" style="border-radius: 5px;" role="button">ADD NEW USERS</a>
@@ -67,10 +67,10 @@
 											<td>
 										<a href="{{route('user.edit',$user->id)}}" class="btn btn-primary">EDIT</a>
 										<a href="{{route('user.destroy',$user->id)}}" class="btn btn-danger">DELETE</a>
-										
+
 
 											</td>
-										</tr>	
+										</tr>
 										@endforeach
 									</tbody>
 								</table>

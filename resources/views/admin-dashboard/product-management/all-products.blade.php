@@ -17,7 +17,7 @@
 			<div class="row mb-2 ml-1 text-light font-weight-bold">
 		<a class="btn btn-primary" href="{{route('product.create')}}" style="border-radius: 5px;" role="button">ADD NEW PRODUCT</a>
 			</div>
-			
+
 			<div class="row">
 				<div class="col-md-12">
 					<div class="card">
@@ -45,12 +45,12 @@
 											<td>{{$product->title}}</td>
 											<td>{{$product->description}}</td>
 											<td>{{$product->user->company}}</td>
-										
+
 											<td>{{$product->category->name}}</td>
 											<td>{{$product->subcategory->name}}</td>
 											<td>{{$product->price}}</td>
-											
-											
+
+
 											<td>
 											<a class="btn btn-success" href="{{route('product.edit', $product->id)}}">Edit</a>
 											<a class="btn btn-danger" href="javascript:void(0)" onclick="$(this).parent().find('form').submit()">Delete</a>
