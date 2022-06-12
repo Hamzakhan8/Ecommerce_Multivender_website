@@ -41,7 +41,7 @@
 						@endif
 
 						<div class="s_product_img pt-3">
-							<img src="{{asset('storage/'.$product->image_path)}}" class="img-fluid">
+							<img src="{{asset('uploads/product/'.$product->image_path)}}" class="img-fluid">
 						</div>
 					</div>
 					<div class="col-md-5 offset-lg-1">
@@ -54,7 +54,7 @@
 								<input type="hidden" name="price" value="{{$product->price}}">
 							  <input type="hidden" name="image_path" value="{{$product->image_path}}">
 								<input type="hidden" name="delivery_charges" value="{{$product->delivery_charges}}">
-							
+
 							<h3>{{$product->title}}</h3>
 							<h2>RS: {{$product->price}}</h2>
 							<ul class="list">
@@ -71,19 +71,19 @@
 									<span>Contact</span> : {{$product->user->contact}}</a>
 								</li>
 							</ul>
-							
+
 							<p class="mb-5">{{$product->description}}</p>
 
-							
+
 							<div class="product_count mt-1">
 								<label for="qty">Quantity:</label>
 								<input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
-								
+
 								<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
 								 class="increase items-count" type="button">
 									<i class="lnr lnr-chevron-up"></i>
 								</button>
-								
+
 								<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
 								 class="reduced items-count" type="button">
 									<i class="lnr lnr-chevron-down"></i>
@@ -104,16 +104,16 @@
 
 		<section class="product_description_area">
 			<div class="container">
-				<ul class="nav nav-tabs" id="myTab" role="tablist">	
-					
+				<ul class="nav nav-tabs" id="myTab" role="tablist">
+
 					<li class="nav-item">
 						<a class="nav-link active" id="contact-tab" data-toggle="tab" role="tab" aria-controls="contact" aria-selected="false">Comments</a>
 					</li>
 				</ul>
 				<div class="tab-content" id="myTabContent">
-					
+
 					<div class="tab-pane fade active" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-						
+
 					</div>
 				<div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 						<div class="row">
@@ -146,7 +146,7 @@
 												<textarea class="form-control" name="comment" id="message" rows="1" placeholder="Message"></textarea>
 											</div>
 											<input type="hidden" name="product_id" value="{{$product->id}}">
-											
+
 										</div>
 										<div class="col-md-12 text-right">
 										<button type="submit" value="submit" class="btn submit_btn">Submit Now</button>

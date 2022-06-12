@@ -36,9 +36,9 @@
 					value="{{$categorytype->id}}">For Category {{$categorytype->name}} .</button>
 								</div>
 							</div>
-			    		
+
 						</div>
-			   		</div>				
+			   		</div>
 				</div>
 				<div class="row">
 				@foreach($products as $product)
@@ -46,7 +46,7 @@
 						<div class="f_p_item">
 							<div class="f_p_img">
 							<a href="{{route('shop.product.details', $product->title)}}">
-								<img class="img-fluid cat" src="{{asset('storage/'.$product->image_path)}}" 
+								<img class="img-fluid cat" src="{{asset('uploads/product/'.$product->image_path)}}"
 								 alt="product images from db">
 							</a>
 								<div class="p_icon">
@@ -76,7 +76,7 @@
 			</div>
 		</div>
 	</section>
-			
+
 
 @include('front-end.partials.footer')
 
@@ -87,7 +87,7 @@
       $('#dynamic_select').on('change', function () {
           var id = $(this).val(); // get selected value
           var cat = $("#cateinput").val();
-          if (id) { 
+          if (id) {
             window.location.replace("http://localhost/softech/public/city/products/"+id+"/"+cat);
 
           }
@@ -98,10 +98,10 @@
 
 		$(document).ready(function(){
 			$('.like').click(function(e){
-				
-				
+
+
 				var like =  $(this).val();
-			
+
  			$.ajax({
             type: 'GET',
             url:'{{url("product/like/")}}'+'/'+like ,
@@ -121,9 +121,9 @@
                 if(data=='2'){
                 	alert(' u unliked the product');
                 	$('#'+$(e.target).attr('id')).removeClass('btn-danger');
-                	$('#'+$(e.target).attr('id')).addClass('btn-light');	
+                	$('#'+$(e.target).attr('id')).addClass('btn-light');
                 }
-                
+
             }
         });
         });
