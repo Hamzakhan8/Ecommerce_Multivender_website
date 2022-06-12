@@ -31,7 +31,7 @@
 								<td width="30%">
 									<div class="media">
 										<div class="d-flex">
-											<img src="{{asset('storage/'.$cart->options->image_path)}}" height="100px;" width="100">
+											<img src="{{asset('uploads/product/'.$cart->image_path)}}" height="100px;" width="100">
 											<p class="ml-3">{{$cart->name}}</p>
 										</div>
 									</div>

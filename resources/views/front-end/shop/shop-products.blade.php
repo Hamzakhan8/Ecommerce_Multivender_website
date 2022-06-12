@@ -15,7 +15,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="main_title pt-2 mt-2">
-						<h2>Featured Products From 
+						<h2>Featured Products From
 							<span style="color: crimson;">{{$user->company}}</span>
 						</h2>
 						<p>Who are in extremely love with eco friendly system.</p>
@@ -26,7 +26,7 @@
 					<div class="col col1 rounded ">
 						<div class="f_p_item">
 							<div class="f_p_img">
-								<img class="img-fluid" src="{{asset('storage/'.$product->image_path)}}" 
+								<img class="img-fluid" src="{{asset('uploads/product/'.$product->image_path)}}"
 								 alt="product images from db">
 								<div class="p_icon">
 									@if(auth()->check() && $product->likes()->where('user_id', auth()->user()->id)->where('product_id', $product->id)->count()>0)
@@ -55,7 +55,7 @@
 			</div>
 		</div>
 	</section>
-			
+
 <!-- data div ends here -->
 
 
@@ -66,10 +66,10 @@
 <script type="text/javascript">
 		$(document).ready(function(){
 			$('.like').click(function(e){
-				
-				
+
+
 				var like =  $(this).val();
-			
+
  			$.ajax({
             type: 'GET',
             url:'{{url("product/like/")}}'+'/'+like ,
@@ -89,9 +89,9 @@
                 if(data=='2'){
                 	alert(' u unliked the product');
                 	$('#'+$(e.target).attr('id')).removeClass('btn-danger');
-                	$('#'+$(e.target).attr('id')).addClass('btn-light');	
+                	$('#'+$(e.target).attr('id')).addClass('btn-light');
                 }
-                
+
             }
         });
         });
