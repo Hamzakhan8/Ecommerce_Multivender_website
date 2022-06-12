@@ -41,7 +41,7 @@
 									<tbody>
 										@foreach($products as $product)
 										<tr>
-											<td><img src="{{asset('storage/'.$product->image_path)}}" height="100px" width="150px"></td>
+											<td><img src="{{asset('uploads/product/'.$product->image_path)}}" height="100px" width="150px"></td>
 											<td>{{$product->title}}</td>
 											<td>{{$product->description}}</td>
 											<td>{{$product->user->company}}</td>

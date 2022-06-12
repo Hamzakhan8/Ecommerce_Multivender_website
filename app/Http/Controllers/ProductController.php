@@ -62,9 +62,11 @@ class ProductController extends Controller
 
         if ($request->hasFile('image')) {
             $file = $request->file('image');
-            $fileName = time().$file->getClientOriginalName();
-            Storage::put('public/'.$fileName,file_get_contents($file));
+            $filename = time().$file->getClientOriginalName();
+            $file->move('uploads/product/',$filename);
 
+
+        }
         $product = Product::create([
             'title' => $request->title,
             'description' => $request->description,
@@ -72,10 +74,10 @@ class ProductController extends Controller
             'subcategory_id' => $request->subcategory,
             'price' => $request->price,
             'city' => Auth::user()->city,
-            'image_path' => $fileName,
+            'image_path' => $filename,
             'user_id' =>  Auth::user()->id,
             ]);
-        }
+
       return redirect()->route('product.index')->with('success','product has been successfully added');
     }
 
