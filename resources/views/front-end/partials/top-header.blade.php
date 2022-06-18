@@ -115,12 +115,15 @@
 									<li class="nav-item">
 										<a class="nav-link"  href="{{route('allocassions')}}">All Categories</a>
 									</li>
+                                    <li class="nav-item">
+										<a class="nav-link"  href="{{route('ViewAllGifts')}}">All products</a>
+									</li>
 									<li class="nav-item">
 										<a class="nav-link"  href="{{route('allShop')}}">All Shops</a>
 									</li>
-									<li class="nav-item">
+									{{-- <li class="nav-item">
 										<a class="nav-link" href="{{route('hallList')}}">Contact Numbers</a>
-									</li>
+									</li> --}}
 
 
 									<li class="nav-item azanlog">
