@@ -74,6 +74,7 @@ Route::get('all-admins', 'UserController@allAdmins')->name('user.admins');
 // ======================================================================================
 	// Product Routes front END
 Route::get('shop/category/{name}','FrontEndController@CategoryProducts')->name('category.products');
+Route::get('shop/category/all-product','FrontEndController@allproducts')->name('allproduct');
 Route::get('hot/deals/{name}','FrontEndController@hotDeals')->name('hotDeals');
 Route::get('shop/subcategory/{name}','FrontEndController@SubCategoryProducts')->name('subcategory.products');
 Route::get('shop/prouct-details/{name}','FrontEndController@ProductDetails')->name('shop.product.details');

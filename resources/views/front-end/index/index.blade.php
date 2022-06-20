@@ -24,7 +24,7 @@
 							<strong >The place where you meet the products of ur choice and ur needs..
 							</strong>
 						</h4>
-						<a class="white_bg_btn" href="{{route('ViewAllGifts')}}">View All Products</a>
+						<a class="white_bg_btn" href="{{route('allproduct')}}">View All Products</a>
 					</div>
 				</div>
 			</div>

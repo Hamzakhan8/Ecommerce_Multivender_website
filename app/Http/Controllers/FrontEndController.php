@@ -29,6 +29,10 @@ class FrontEndController extends Controller
     	//here we are using many to one relation one category has many products
     	return view ('front-end.categoryWise-products.categoryWise-products', compact('products','categorytype'));
     }
+    public function allproducts(){
+        $product = Product::all()->paginate(4);
+        return view('front-end.all-product.all-product-details', compact('product'));
+    }
 
     public function ProductDetails($name)
     {
