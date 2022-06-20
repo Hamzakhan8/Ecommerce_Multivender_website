@@ -37,7 +37,7 @@
                         <div class="info_item">
                             <i class="lnr lnr-phone-handset"></i>
                             <h6>
-                                <a >0301 1234567</a>
+                                <a >0321-9196978</a>
                             </h6>
                             <p>24 / 7</p>
                         </div>

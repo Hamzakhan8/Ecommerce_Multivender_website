@@ -27,7 +27,7 @@ class FrontEndController extends Controller
     	//here we are fetching row from category the where name = $name
     	$products = $categorytype->products;
     	//here we are using many to one relation one category has many products
-    	return view ('front-end.categoryWise-products.categoryWise-products', compact('products','categorytype'));
+        return view('front-end.categoryWise-products.categoryWise-products',compact('categorytype','products'));
     }
     public function allproducts(){
         $product = Product::all()->paginate(4);
@@ -230,7 +230,7 @@ class FrontEndController extends Controller
     public function viewAllGifts()
     {
         $products = Product::get();
-        return view ('front-end.categoryWise-products.categoryWise-products', compact('products'));
+        return view('front-end.categoryWise-products.categoryWise-products',compact('products'));
     }
 
     public function contactUs()

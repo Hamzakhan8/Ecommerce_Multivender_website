@@ -31,11 +31,15 @@
 									  @endforeach
 									</select>
 								</div>
-								<div class="col-md">
-					<button type="text" id="cateinput" class="btn btn-clear text-dark" disabled
-					value="{{$categorytype->id}}">For Category {{$categorytype->name}} .</button>
-								</div>
-							</div>
+
+
+
+								{{-- <div class="col-md">
+					<a type="text" id="cateinput" class="btn btn-clear text-dark" disabled
+					value="{{$categorytype->id}}">For Category {{$categorytype->name}} .</a>
+								</div> --}}
+
+                                </div>
 
 						</div>
 			   		</div>

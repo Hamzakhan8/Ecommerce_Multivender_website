@@ -26,7 +26,7 @@
 		<div class="top_menu row m0">
 			<div class="container-fluid top-data">
 				<div class="float-left">
-					<p>Call Us: 0301-1112233</p>
+					<p>Call Us: 0321-9196978</p>
 				</div>
 				<div class="float-right">
 					<ul class="right_side">
@@ -102,8 +102,11 @@
 									<li class="nav-item">
 										<a class="nav-link"  href="{{route('home.page')}}">Home</a>
 									</li>
+									<li class="nav-item">
+										<a class="nav-link"  href="{{route('ViewAllGifts')}}">All products</a>
+									</li>
 									<li class="nav-item submenu dropdown">
-										<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category</a>
+										<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category <i class="fas fa-chevron-down"></i></a>
 										<ul class="dropdown-menu">
 								@foreach($categories as $category)
 								<li class="nav-item">
@@ -115,12 +118,13 @@
 									<li class="nav-item">
 										<a class="nav-link"  href="{{route('allocassions')}}">All Categories</a>
 									</li>
+
 									<li class="nav-item">
 										<a class="nav-link"  href="{{route('allShop')}}">All Shops</a>
 									</li>
-									<li class="nav-item">
+									{{-- <li class="nav-item">
 										<a class="nav-link" href="{{route('hallList')}}">Contact Numbers</a>
-									</li>
+									</li> --}}
 
 
 									<li class="nav-item azanlog">
