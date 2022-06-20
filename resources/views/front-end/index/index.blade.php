@@ -17,13 +17,13 @@
 			<div class="container">
 				<div class="banner_content row">
 					<div class="offset-lg-2 col-lg-8">
-						<h3 style="color: yellow;">One Shop
-							<br />For Every Electronic Device You Need</h3>
-						<h4 style="color: yellow;">
+						<h3 style="color: white;">One Shop
+							<br/>For Every Agriculture Related Stuff You Need</h3><br>
+						<h4 style="color: white;">
 							<strong >The place where you meet the products of ur choice and ur needs..
 							</strong>
 						</h4>
-						<a class="white_bg_btn" href="{{route('allproduct')}}">View All Products</a>
+						<!-- <a class="white_bg_btn" href="{{route('allproduct')}}">View All Products</a> -->
 					</div>
 				</div>
 			</div>

@@ -598,7 +598,7 @@ a:focus {
 }
 
 .home_banner_area .overlay {
-    background: rgba(0, 0, 0, 0.33);
+    background: rgba(0, 0, 0, 0.65);
     position: absolute;
     left: 0;
     right: 0;
@@ -728,7 +728,7 @@ a:focus {
 }
 
 .banner_area .banner_inner .overlay {
-    background: rgba(0, 0, 0, 0.33);
+    background: rgba(0, 0, 0, 0.65);
     position: absolute;
     left: 0;
     right: 0;
@@ -751,7 +751,7 @@ a:focus {
 }
 
 .banner_area .banner_inner .banner_content .page_link a {
-    font-size: 14px;
+    font-size: 20px;
     color: #ffffff;
     font-family: "Roboto", sans-serif;
     margin-right: 32px;
