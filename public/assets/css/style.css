@@ -590,11 +590,11 @@ a:focus {
 ============================================================================================ */
 
 .home_banner_area {
-    background: url(https://surmawala.pk/media/mageplaza/bannerslider/banner/image/p/e/pe-led-slider-d.jpg) no-repeat center bottom;
+    background: url(../img/banner/banner-3.jpg) no-repeat center bottom;
     position: relative;
     z-index: 1;
     min-height: 900px;
-    background-size: auto 500px;
+    background-size: auto 900px;
 }
 
 .home_banner_area .overlay {
