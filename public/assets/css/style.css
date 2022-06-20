@@ -594,7 +594,7 @@ a:focus {
     position: relative;
     z-index: 1;
     min-height: 900px;
-    background-size: auto 900px;
+    background-size: auto 1000px;
 }
 
 .home_banner_area .overlay {
