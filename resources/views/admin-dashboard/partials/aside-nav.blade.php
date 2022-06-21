@@ -3,7 +3,8 @@
         <!-- Sidebar Header    -->
         <div class="sidenav-header d-flex align-items-center justify-content-center">
           <!-- User Info-->
-          <div class="sidenav-header-inner text-center"><img src="{{asset('storage/'.Auth()->user()->image_path)}}" alt="Profile Pic" class="img-fluid ">
+          <div class="sidenav-header-inner text-center">
+            <!-- <img src="{{asset('storage/'.Auth()->user()->image_path)}}" alt="Profile Pic" class="img-fluid "> -->
             <h2 class="h5">{{ Auth::user()->name }} </h2><span class="text-light">
             @if(Auth::user()->role==2)
             {{'Seller'}}
@@ -27,10 +28,10 @@
             <!-- <li><a href="{{route('user.admins')}}"> <i class="icon-user"></i>Admin </a></li> -->
             <li><a href="{{route('coupon.index')}}"> <i class="icon-user"></i>Coupons </a></li>
             <li><a href="{{route('contact.index')}}"> <i class="icon-user"></i>Contact Us </a></li>
-            <li><a href="{{route('hall.index')}}"> <i class="icon-user"></i>Event Halls </a></li>
+            <!-- <li><a href="{{route('hall.index')}}"> <i class="icon-user"></i>Event Halls </a></li> -->
 
              <!-- <li><a href="{{route('brand.index')}}"> <i class="fa fa-amazon"></i>Brand </a></li> -->
-            <li><a href="{{route('city.index')}}"> <i class="icon-grid"></i>City </a></li>
+            <!-- <li><a href="{{route('city.index')}}"> <i class="icon-grid"></i>City </a></li> -->
             <li><a href="{{route('category.index')}}"> <i class="icon-grid"></i>Category </a></li>
           <li><a href="{{route('subcategory.index')}}"> <i class="icon-grid"></i>Sub Category </a></li>
            

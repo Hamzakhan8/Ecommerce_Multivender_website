@@ -46,7 +46,7 @@
 									<h5>x {{$cart->qty}}</h5>
 								</td>
 								<td>
-									<p> {{$cart->price}}</p>
+									<p> {{$tot = $cart->price * $cart->qty}}</p>
 								</td>
 							</tr>
 							
@@ -59,7 +59,7 @@
 									<h5>You Have To Pay Once For Whole Order</h5>
 								</td>
 								<td>
-									<p>{{Session::get('shipping_price')}}</p>
+									<p>{{$shipping = Session::get('shipping_price')}}</p>
 								</td>
 							</tr>
 							<tr>
@@ -70,7 +70,7 @@
 									<h5></h5>
 								</td>
 								<td>
-									<p>{{Session::get('totalPrice')}}</p>
+									<p>{{$total = $shipping + $tot}}</p>
 								</td>
 							</tr>
 							
@@ -82,7 +82,8 @@
 									<h5></h5>
 								</td>
 								<td>
-									<p class="font-weight-bold">RS : {{Session::get('totalPrice')}}</p>
+									<p class="font-weight-bold">RS : {{$total}}</p>
+									<!-- <p class="font-weight-bold">RS : {{Session::get('totalPrice')}}</p> -->
 								</td>
 							</tr>
 						</tbody>

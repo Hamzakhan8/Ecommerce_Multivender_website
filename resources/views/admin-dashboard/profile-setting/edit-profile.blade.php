@@ -45,9 +45,9 @@
 			    <label for="exampleInputEmail1">CNIC</label>
 			    <input type="text" class="form-control" name="cnic"  value="{{$user->cnic}}">
 			  </div>
-			  <div class="form-group">
+			  <!-- <div class="form-group">
 			    <input type="file" class="form-control-warning" name="image" > <small class="form-text">Image Of User For Profile</small>
-			  </div>	
+			  </div>	 -->
 			  <div class="form-group">
 			  <button type="submit" class="btn btn-primary">Submit</button>	
 			  </div>

@@ -25,7 +25,7 @@
 										<th>ID</th>
 										<th>Name</th>
 										<th>Email</th>
-										<th>Email Verfication</th>
+										<!-- <th>Email Verfication</th> -->
 										<th>Country</th>
 										<th>City</th>
 										<th>Company</th>
@@ -43,7 +43,7 @@
 											<td>{{$user->id}}</td>
 											<td>{{$user->name}}</td>
 											<td>{{$user->email}}</td>
-											<td>{{$user->email_verified_at=='' ? 'not verified' : 'verified'}}</td>
+											<!-- <td>{{$user->email_verified_at=='' ? 'not verified' : 'verified'}}</td> -->
 											<td>{{$user->country}}</td>
 											<td>{{$user->city}}</td>
 											<td>{{$user->company}}</td>

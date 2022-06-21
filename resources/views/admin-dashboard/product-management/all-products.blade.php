@@ -58,7 +58,7 @@
 												{{method_field('delete')}}
 												@csrf
 											</form>
-											<a class="btn btn-secondary" href="{{route('product.show', $product->id)}}">Show</a>
+											<!-- <a class="btn btn-secondary" href="{{route('product.show', $product->id)}}">Show</a> -->
 											</td>
 										</tr>
 										@endforeach

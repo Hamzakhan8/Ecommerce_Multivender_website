@@ -5,7 +5,7 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-4 text-center">
-			<img src="{{asset('storage/'.$user->image_path)}}" alt="Profile Pic" class="img-fluid">
+			<!-- <img src="{{asset('storage/'.$user->image_path)}}" alt="Profile Pic" class="img-fluid"> -->
   			<div class="form-group mt-5">
 			 
 			 <a href="{{route('profile.edit',$user->id)}}" class="btn btn-lg text-light rounded btn-primary"> EDIT .</a>	
