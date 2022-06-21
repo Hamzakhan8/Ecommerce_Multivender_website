@@ -15,10 +15,10 @@
 			<div class="container">
 				<div class="banner_content text-center">
 					<h2>Login</h2>
-					<div class="page_link">
+					<!-- <div class="page_link">
 						<a href="index.html">Home</a>
 						<a href="login.html">Login</a>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>

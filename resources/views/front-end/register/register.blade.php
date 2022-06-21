@@ -16,10 +16,10 @@
 			<div class="container">
 				<div class="banner_content text-center">
 					<h2>Register</h2>
-					<div class="page_link">
+					<!-- <div class="page_link">
 						<a href="index.html">Home</a>
 						<a href="registration.html">Register</a>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
