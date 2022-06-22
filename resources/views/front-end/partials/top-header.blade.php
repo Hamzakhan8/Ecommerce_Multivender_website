@@ -86,7 +86,7 @@
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<a class="navbar-brand logo_h" href="{{route('home.page')}}">
 						{{-- <img src="{{url('assets/img/abc.png')}}" alt=""> --}}
-						<span>Khidmath-e-Kisaan</span>
+						<span >Khidmath-e-Kisaan</span>
 					</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 					 aria-expanded="false" aria-label="Toggle navigation">
