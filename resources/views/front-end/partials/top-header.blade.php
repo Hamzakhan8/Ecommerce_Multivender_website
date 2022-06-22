@@ -96,17 +96,17 @@
 					</button>
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-						<div class="row w-100">
+						<div class="ml-3 row w-100">
 							<div class="col-lg-7 pr-0">
 								<ul class="nav navbar-nav center_nav pull-right">
 									<li class="nav-item">
 										<a class="nav-link"  href="{{route('home.page')}}">Home</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link"  href="{{route('ViewAllGifts')}}">All products</a>
+										<a class="nav-link"  href="{{route('ViewAllGifts')}}">Shop</a>
 									</li>
 									<li class="nav-item submenu dropdown">
-										<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category <i class="fas fa-chevron-down"></i></a>
+										<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category <i class="lnr lnr lnr-chevron-down"></i></a>
 										<ul class="dropdown-menu">
 								@foreach($categories as $category)
 								<li class="nav-item">
@@ -173,8 +173,6 @@
 
 							<div class="col-lg-5">
 								<ul class="nav navbar-nav navbar-right right_nav pull-right">
-
-
 
 									<hr>
 								<nav class="navbar navbar-light bg-light ml-2">

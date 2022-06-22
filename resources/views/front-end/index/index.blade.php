@@ -23,7 +23,7 @@
 							<strong >The place where you meet the products of ur choice and ur needs..
 							</strong>
 						</h4>
-						<!-- <a class="white_bg_btn" href="{{route('allproduct')}}">View All Products</a> -->
+						<a class="white_bg_btn" href="{{route('ViewAllGifts')}}">View All Products</a>
 					</div>
 				</div>
 			</div>
@@ -103,7 +103,8 @@
 				@foreach($user as $user)
 				<div class="card">
 					<div class="bg-image hover-overlay ripple" data-ripple-color="light">
-					    <img src="{{asset('storage/'.$user->image_path)}}" class="img-fluid" />
+					    <!-- <img src="{{asset('storage/'.$user->image_path)}}" class="img-fluid" /> -->
+					    <img src="/assets/img/banner/banner-3.jpg" class="img-fluid" />
 					    <a href="#!">
 					     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
 					    </a>
@@ -131,7 +132,10 @@
 	<!--================End Clients Logo Area =================-->
 
 	<!--================Feature Product Area =================-->
-	<section class="feature_product_area section_gap">
+	
+
+
+	<!-- <section class="feature_product_area section_gap">
 			<div class="main_box">
 			<div class="container-fluid">
 				<div class="row">
@@ -153,7 +157,7 @@
 
     	</div>
 		</div>
-	</section>
+	</section> -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
