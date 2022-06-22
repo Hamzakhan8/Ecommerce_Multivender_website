@@ -9,13 +9,13 @@
         @include('admin-dashboard/partials/analytics')
 
 
-      
+
 <!-- THIS IS FOR THE MAIN CONTENTS,  TO BEDISPLAYED IN EVERY PAGE  -->
 
       <section class="mt-30px mb-30px">
         <div class="container-fluid">
           <div class="row">
-           
+
            @yield('main-contents')
 
           </div>
