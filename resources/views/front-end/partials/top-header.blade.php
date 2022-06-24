@@ -1,22 +1,22 @@
 <style>
 .azanlog{display: none;}
-.top-data p, .top-data ul li a{ font-weight: bold !important; color: crimson !important;}
+.top-data p, .top-data ul li a{ font-weight: bold !important; color: #28a745 !important;}
 
 @media only screen and (max-width: 600px) {
 .azanlog{display: block;}
 .azansearch{ width: 50px !important; margin-left:10px; }
 .azansrchin{width: 150px !important; }
-.main_menu{ border-bottom: 2px solid red !important; }
+.main_menu{ border-bottom: 2px solid #28a745 !important; }
 }
 
 @media only screen and (max-width: 1000px) {
-.main_menu{ border-bottom: 2px solid red !important; }
+.main_menu{ border-bottom: 2px solid #28a745 !important; }
 .active a{display: none !important;}
 
 }
 
 @media only screen and (max-width: 1450px) {
-.main_menu{ border-bottom: 2px solid red !important; }
+.main_menu{ border-bottom: 2px solid #28a745 !important; }
 #cartli{display: none !important; }
 }
 
