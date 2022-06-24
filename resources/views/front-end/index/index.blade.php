@@ -168,7 +168,7 @@
 					</div>
 
 					<div class="card-body" style="color: black;">
-					    <h5 class="card-title">{{$user->name}}</h5>
+					    <h5 class="card-title">{{$user->company}}</h5>
 						    <p class="card-text">
 							<strong style="color: crimson;">Location: </strong> {{$user->address}}
 					    	</p>
