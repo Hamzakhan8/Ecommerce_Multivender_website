@@ -22,7 +22,7 @@
 							<h3>For Every Agriculture Related Stuff You Need</h3>
 							<br>
 						<h4 style="color: white;">
-							<strong >The place where you meet the products of ur choice and ur needs..
+							<strong >The place where you meet the products of your choice and your needs.
 							</strong>
 						</h4>
 						<a class="white_bg_btn" href="{{route('ViewAllGifts')}}">View All Products</a>
@@ -92,9 +92,9 @@
 							<strong style="color: crimson;">Price </strong> {{$product->price}}
 					    	</p>
 
-					    	<p class="card-text">
+					    	<!-- <p class="card-text">
 							<strong style="color: crimson;">Mobile: </strong> {{$product->user->contact}}
-					    	</p>
+					    	</p> -->
 
 					    <a href="{{route('shop.products',$product->id)}}" class="btn btn-success">Visit Product</a>
 					  </div>
@@ -131,10 +131,10 @@
 						    <a href="{{route('category.products',$category->name)}}" style="text-decoration: none;">
 							<strong style="color: crimson;">Category: </strong>
 						    <h3 class="card-text">
-							<strong>{{$category->name}}</strong>
+							<strong style="color: #28a745;">{{$category->name}}</strong>
 					    	</h3>
-					    	<br>
-					    	<h5 class="text-dark">Click To Visit All Products From This Category</h5>
+					    	<!-- <br>
+					    	<h5 class="text-dark">Click To Visit All Products From This Category</h5> -->
 
 					    	</a>
 					  </div>

@@ -37,7 +37,7 @@
 					<div class="col-md-2">
 						<ul class="list-group">
 						  <a href="{{route('subcategory.products',$category->name)}}">
-						  	<li class="list-group-item" style="text-align:center;  padding: 60px 0px; ">{{$category->name}}</li><br>
+						  	<li class="list-group-item" style="text-align:center; color: #28a745;  padding: 60px 0px; ">{{$category->name}}</li><br>
 						  </a>
 						</ul>
 					</div>
