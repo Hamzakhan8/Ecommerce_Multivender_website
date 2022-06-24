@@ -17,8 +17,10 @@
 			<div class="container">
 				<div class="banner_content row">
 					<div class="offset-lg-2 col-lg-8">
-						<h3 style="color: white;">One Shop
-							<br/>For Every Agriculture Related Stuff You Need</h3><br>
+						<h3 style="color: #28a745; margin: 0px;">Khidmath-e-Kisaan</h3>
+							<br>
+							<h3>For Every Agriculture Related Stuff You Need</h3>
+							<br>
 						<h4 style="color: white;">
 							<strong >The place where you meet the products of ur choice and ur needs..
 							</strong>
