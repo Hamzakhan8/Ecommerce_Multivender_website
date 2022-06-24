@@ -176,7 +176,7 @@
 						    <p class="card-text">
 							<strong style="color: crimson;">Location: </strong> {{$user->address}}
 					    	</p>
-                            {{-- <img src="{{url('uploads/profile/'.$user->img_path)}}" alt="image not found"> --}}
+                            <img src="{{url('uploads/profile/'.$user->img_path)}}" alt="image not found">git
 
 					    	<p class="card-text">
 							<strong style="color: crimson;">Mobile: </strong> {{$user->contact}}
