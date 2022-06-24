@@ -34,7 +34,7 @@
 	<!--================End Home Banner Area =================-->
 
 	<!--================Hot Deals Area =================-->
-	<!-- <section class="hot_deals_area section_gap">
+	<!-- {{-- <section class="hot_deals_area section_gap"">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-6">
@@ -42,9 +42,9 @@
 						<img class="img-fluid" src="{{url('assets/img/product/hot_deals/deal1.jpg')}}" alt="">
 						<div class="content">
 							<h2>Hot Deals of Mobile Phones</h2>
-							{{-- <p>shop now</p> --}}
+							<p>shop now</p>
 						</div>
-						{{-- <a class="hot_deal_link" href="{{route('hotDeals','clothing')}}"></a> --}}
+						<a class="hot_deal_link" href="{{route('hotDeals')}}"></a>
 					</div>
 				</div>
 
@@ -53,15 +53,61 @@
 						<img class="img-fluid" src="{{url('assets/img/product/hot_deals/deal1.jpg')}}" alt="">
 						<div class="content">
 							<h2>Best Offers on All Electronics</h2>
-							{{-- <p>shop now</p> --}}
+							<p>shop now</p>
 						</div>
-						{{-- <a class="hot_deal_link" href="{{route('hotDeals','electronics')}}"></a> --}}
+						<a class="hot_deal_link" href="{{route('hotDeals','electronics')}}"></a>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section> -->
+	</section> --}}\ -->
+
+<!-- ================================================================== -->
+
+    <section class="clients_logo_area" style="margin-top: 50px;">
+		<div class="container-fluid">
+			<div class="row">
+					<div class="main_title">
+						<h2>Top Product</h2>
+						<p class="text-dark">Who are in extremely love with your choice. Slide too see more</p>
+					</div>
+				</div>
+				<div class="clients_slider owl-carousel">
+				@foreach($products as $product)
+
+				<div class="card">
+					<div class="bg-image hover-overlay ripple" data-ripple-color="light">
+						<a href="{{route('shop.products',$product->id)}}">
+							<img src="{{asset('uploads/product/'.$product->image_path)}}" class="img-fluid" />
+					     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+					    </a>
+					</div>
+
+					<div class="card-body" style="color: black;">
+					    <h5 class="card-title"></h5>
+                        <p class="card-text">
+							<strong style="color: crimson;">Name </strong> {{$product->title}}
+					    	</p>
+						    <p class="card-text">
+							<strong style="color: crimson;">Price </strong> {{$product->price}}
+					    	</p>
+
+					    	<p class="card-text">
+							<strong style="color: crimson;">Mobile: </strong> {{$product->user->contact}}
+					    	</p>
+
+					    <a href="{{route('shop.products',$product->id)}}" class="btn btn-success">Visit Product</a>
+					  </div>
+					</div>
+
+				@endforeach
+
+			</div>
+		</div>
+	</section>
+
 	<!--================Ocassion =================-->
+
 	<section class="clients_logo_area" style="margin-top: 50px;">
 		<div class="container-fluid">
 			<div class="row">
@@ -99,7 +145,9 @@
 			</div>
 		</div>
 	</section><br><br>
+
 	<!--================Clients Logo Area =================-->
+
 	<section class="clients_logo_area">
 		<div class="container-fluid">
 			<div class="row">
@@ -138,10 +186,11 @@
 			</div>
 		</div>
 	</section>
+
 	<!--================End Clients Logo Area =================-->
 
 	<!--================Feature Product Area =================-->
-	
+
 
 
 	<!-- <section class="feature_product_area section_gap">
