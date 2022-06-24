@@ -27,12 +27,18 @@
 						</thead>
 						<tbody>
 								@foreach(Cart::content() as $cart)
+
+
 							<tr>
 								<td width="30%">
 									<div class="media">
 										<div class="d-flex">
-											<img src="{{asset('uploads/product/'.$cart->image_path)}}" height="100px;" width="100">
-											<p class="ml-3">{{$cart->name}}</p>
+                                            {{-- @foreach ($products as $product )
+
+                                            @endforeach --}}
+											<img src="{{asset('uploads/product/'.$cart->options->image_path)}}" height="100px;" width="100">
+
+                                            <p class="ml-3">{{$cart->name}}</p>
 										</div>
 									</div>
 								</td>

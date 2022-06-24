@@ -80,11 +80,13 @@ class FrontEndController extends Controller
 
     public function AddCartItem(Request $request)
     {
-        Cart::add($request->product_id, $request->title, $request->qty, $request->price,
+        dd($request);
+        Cart::add($request->product_id, $request->title,$request->qty, $request->price,$request,
         ['size'=>$request->size,'seller_id'=>$request->seller_id,'delivery_charges'=>$request->delivery_charges,'extras'=>$request->extras,'image_path'=> $request->image_path, 'title' => $request->title]);
 
         $totalPrice = Cart::subtotal();
         Session::put('totalPrice', $totalPrice);
+        // Session::Put('image_path',$image_path);
 
         Session::put('extras',$request->extras);
         return back()->with('success', 'Added To Cart Successfully');
@@ -92,7 +94,8 @@ class FrontEndController extends Controller
 
     public function CartDetails()
     {
-        return view('front-end.cart-details.add-to-cart');
+        // $products=Product::all();
+        return view('front-end.cart-details.add-to-cart',);
     }
     public function CartUpdate(Request $request , $id)
     {
@@ -100,6 +103,7 @@ class FrontEndController extends Controller
         $totalPrice = Cart::subtotal();
         Session::put('totalPrice',$totalPrice);
         Session::put('extras',$request->extras);
+
         return back();
     }
     public function ApplyCoupon(Request $request)
