@@ -60,7 +60,7 @@ class ProfileController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {       
+    {
            $user = User::find($id);
            return view ('admin-dashboard.profile-setting.edit-profile',compact('user'));
     }
@@ -83,6 +83,7 @@ class ProfileController extends Controller
         $user->address = $request->address;
         $user->contact = $request->contact;
         $user->cnic = $request->cnic;
+        // $user->img_path=$request->img_path;
         $user->update();
 
         if(!empty($request->password))
@@ -94,12 +95,14 @@ class ProfileController extends Controller
         }
 
         if ($request->hasFile('image')) {
-            Storage::delete('public/'.$user->image_path);
             $file = $request->file('image');
-            $fileName = time().$file->getClientOriginalName();
-            Storage::put('public/'.$fileName,file_get_contents($file));
-            $user->image_path = $fileName;
+            $filename = time().$file->getClientOriginalName();
+            $file->move('uploads/profile/',$filename);
+            $user->image_path=$filename;
             $user->update();
+
+
+
         }
 
         return redirect()->route('profile.show',$user->id)->with('success','Profile Setting Has Been Updated');

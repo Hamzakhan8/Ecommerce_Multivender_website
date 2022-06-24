@@ -163,15 +163,20 @@
 					    <!-- <img src="{{asset('storage/'.$user->image_path)}}" class="img-fluid" /> -->
 					    <a href="{{route('shop.products',$user->id)}}">
 							<img src="/assets/img/banner/banner-3.jpg" class="img-fluid" />
+					     {{-- <img src="{{asset('uploads/profile/'.$user->)}}" >/ --}}
+                         <img src="{{asset('uploads/profile/'.$user->image_path)}}" alt="image not found">
+					    {{-- <img src="/assets/img/banner/banner-3.jpg" class="img-fluid" /> --}}
+					    <a href="#!">
 					     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
 					    </a>
 					</div>
 
 					<div class="card-body" style="color: black;">
-					    <h5 class="card-title">{{$user->company}}</h5>
+					    <h5 class="card-title">{{$user->name}}</h5>
 						    <p class="card-text">
 							<strong style="color: crimson;">Location: </strong> {{$user->address}}
 					    	</p>
+                            {{-- <img src="{{url('uploads/profile/'.$user->img_path)}}" alt="image not found"> --}}
 
 					    	<p class="card-text">
 							<strong style="color: crimson;">Mobile: </strong> {{$user->contact}}
