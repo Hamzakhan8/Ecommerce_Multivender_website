@@ -45,7 +45,7 @@
 						<div class="f_p_item">
 							<div class="f_p_img">
 							<a href="{{route('shop.product.details', $product->title)}}">
-								<img class="img-fluid cat" src="{{asset('storage/'.$product->image_path)}}"
+								<img class="img-fluid cat" src="{{asset('uploads/product/'.$product->image_path)}}"
 								 alt="product images from db">
 							</a>
 								<div class="p_icon">
