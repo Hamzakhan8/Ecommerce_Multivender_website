@@ -34,7 +34,7 @@
 	<!--================End Home Banner Area =================-->
 
 	<!--================Hot Deals Area =================-->
-	<section class="hot_deals_area section_gap">
+	<!-- <section class="hot_deals_area section_gap">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-6">
@@ -60,9 +60,9 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<!--================Ocassion =================-->
-	<section class="clients_logo_area">
+	<section class="clients_logo_area" style="margin-top: 50px;">
 		<div class="container-fluid">
 			<div class="row">
 					<div class="main_title">
@@ -73,6 +73,13 @@
 				<div class="clients_slider owl-carousel">
 				@foreach($category as $category)
 				<div class="card">
+
+				<div class="bg-image hover-overlay ripple" data-ripple-color="light">
+						<a href="{{route('category.products',$category->name)}}">
+							<img src="/assets/img/banner/banner-3.jpg" class="img-fluid" />
+					     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+					    </a>
+					</div>
 
 					<div class="card-body text-center" style="color: black;">
 						    <a href="{{route('category.products',$category->name)}}" style="text-decoration: none;">
@@ -106,8 +113,8 @@
 				<div class="card">
 					<div class="bg-image hover-overlay ripple" data-ripple-color="light">
 					    <!-- <img src="{{asset('storage/'.$user->image_path)}}" class="img-fluid" /> -->
-					    <img src="/assets/img/banner/banner-3.jpg" class="img-fluid" />
-					    <a href="#!">
+					    <a href="{{route('shop.products',$user->id)}}">
+							<img src="/assets/img/banner/banner-3.jpg" class="img-fluid" />
 					     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
 					    </a>
 					</div>
@@ -122,7 +129,7 @@
 							<strong style="color: crimson;">Mobile: </strong> {{$user->contact}}
 					    	</p>
 
-					    <a href="{{route('shop.products',$user->id)}}" class="btn btn-primary">Visit Shop</a>
+					    <a href="{{route('shop.products',$user->id)}}" class="btn btn-success">Visit Shop</a>
 					  </div>
 					</div>
 
