@@ -26,7 +26,7 @@
             @if(auth()->user()->role=='1')
             <li><a href="{{route('user.index')}}"> <i class="icon-user"></i>Users </a></li>
             <!-- <li><a href="{{route('user.admins')}}"> <i class="icon-user"></i>Admin </a></li> -->
-            <li><a href="{{route('coupon.index')}}"> <i class="icon-user"></i>Coupons </a></li>
+            
             <li><a href="{{route('contact.index')}}"> <i class="icon-user"></i>Contact Us </a></li>
             <!-- <li><a href="{{route('hall.index')}}"> <i class="icon-user"></i>Event Halls </a></li> -->
 
@@ -40,6 +40,9 @@
           @if(auth()->user()->role != 3)
           <li>
             <a href="{{route('product.index')}}"> <i class="fa fa-archive"></i>Products</a>
+          </li>
+          <li>
+            <a href="{{route('coupon.index')}}"> <i class="icon-user"></i>Coupons </a>
           </li>
           @endif
           <li>
