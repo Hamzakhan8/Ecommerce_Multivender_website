@@ -123,12 +123,12 @@
 									<div class="review_item">
 										<div class="media">
 											<div class="d-flex">
-												<img src="{{asset('assets/img/product/single-product/review-1.png')}}" alt="">
+												<img style="width: auto; height: 60px;" src="{{asset('assets/img/product/single-product/1.png')}}" alt="">
 											</div>
 											<div class="media-body">
 												<h4>{{$comment->user->name}}</h4>
 												<h5>{{$comment->created_at}}</h5>
-												<a class="reply_btn" href="#">Reply</a>
+												<!-- <a class="reply_btn" href="#">Reply</a> -->
 											</div>
 										</div>
 										<p>{{$comment->comment}}</p>

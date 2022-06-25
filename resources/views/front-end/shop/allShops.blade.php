@@ -14,6 +14,12 @@
 		<div class="main_box">
 			<div class="container-fluid">
 				<br><br>
+
+				<div class="main_title pt-2 mt-2">
+						<h2>All Shpos</h2>
+						<h3>Click the Shop to See it's Products</h3>
+				</div>
+
 				<div class="row">
 				@foreach($user as $user)
 				<div class="col-md-3" >
@@ -36,7 +42,7 @@
 							<strong style="color: crimson;">Mobile: </strong> {{$user->contact}}
 					    	</p>
 
-					    <a href="{{route('shop.products',$user->id)}}" class="btn btn-primary">Visit Shop</a>
+					    <a href="{{route('shop.products',$user->id)}}" class="btn btn-success">Visit Shop</a>
 					  </div>
 					</div>
 				</div>

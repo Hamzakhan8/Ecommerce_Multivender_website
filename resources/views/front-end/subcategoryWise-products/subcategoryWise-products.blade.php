@@ -24,9 +24,9 @@
 					<div class="col col1">
 						<div class="f_p_item">
 							<div class="f_p_img">
-								<img class="img-fluid cat" src="{{asset('storage/'.$product->image_path)}}" 
+								<img style=" width: auto; height: 200px;" class="img-fluid cat" src="{{asset('storage/'.$product->image_path)}}" 
 								 alt="product images from db">
-								<div class="p_icon">
+								<!-- <div class="p_icon">
 									@if(auth()->check() && $product->likes()->where('user_id', auth()->user()->id)->where('product_id', $product->id)->count()>0)
 										<button value="{{$product->id}}" id="{{$product->id}}"  class="like btn btn-danger">
 										<i class="lnr lnr-heart"></i>
@@ -38,7 +38,7 @@
 										</button>
 
 									@endif
-								</div>
+								</div> -->
 							</div>
 							<a href="{{route('shop.product.details', $product->title)}}">
 								<h4>{{$product->title}}</h4>

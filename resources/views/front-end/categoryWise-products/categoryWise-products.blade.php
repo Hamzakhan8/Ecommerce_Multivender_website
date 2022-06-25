@@ -15,12 +15,12 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="main_title pt-2 mt-2">
+						<br>
 						<h2>Featured Products</h2>
-						<p>Who are in extremely love with eco friendly system.</p>
+						<h3>Who are in extremely love with eco friendly system.</h3>
 					</div>
 
-					<div class="main_title pt-2 mt-2">
-						<!-- for select -->
+					<!-- <div class="main_title pt-2 mt-2">
 						<div class="form-group">
 							<div class="row">
 								<div class="col-md">
@@ -39,21 +39,21 @@
 					value="{{$categorytype->id}}">For Category {{$categorytype->name}} .</a>
 								</div> --}}
 
-                                </div>
-
+                            </div>
 						</div>
-			   		</div>
+			   		</div> -->
+					
 				</div>
 				<div class="row">
 				@foreach($products as $product)
-					<div class="col col1">
+					<div class="col lg-6">
 						<div class="f_p_item">
 							<div class="f_p_img">
 							<a href="{{route('shop.product.details', $product->title)}}">
-								<img class="img-fluid cat" src="{{asset('uploads/product/'.$product->image_path)}}"
+								<img style=" width: auto; height: 200px;" class="img-fluid cat" src="{{asset('uploads/product/'.$product->image_path)}}"
 								 alt="product images from db">
 							</a>
-								<div class="p_icon">
+								<!-- <div class="p_icon">
 									@if(auth()->check() && $product->likes()->where('user_id', auth()->user()->id)->where('product_id', $product->id)->count()>0)
 										<button value="{{$product->id}}" id="{{$product->id}}"  class="like btn btn-danger">
 										<i class="lnr lnr-heart"></i>
@@ -65,7 +65,7 @@
 										</button>
 
 									@endif
-								</div>
+								</div> -->
 							</div>
 							<a href="{{route('shop.product.details', $product->title)}}">
 								<h4>{{$product->title}}</h4>
