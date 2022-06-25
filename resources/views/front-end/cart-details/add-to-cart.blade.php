@@ -61,7 +61,7 @@
 
 										</button>
 									</div>
-									<button class="btn btn-primary" type="submit">Update Cart</button>
+									<button class="btn btn-success" type="submit">Update Cart</button>
 								</form>
 								</td>
 								<td>
@@ -112,12 +112,12 @@
 
 		<div class="row justify-content-center">
 			<div class="col">
-		<a class="main_btn ml" href="{{route('checkout')}}">Proceed to checkout</a>
+		<a class="main_btn ml btn-success" href="{{route('checkout')}}">Proceed to checkout</a>
 			</div>
 
-			<div class="col">
+			<!-- <div class="col">
 		<a class="main_btn ml" href="{{route('order.self')}}">Self Receive</a>
-			</div>
+			</div> -->
 		</div>
 
 	</section>
