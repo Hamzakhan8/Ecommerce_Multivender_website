@@ -80,13 +80,10 @@ class FrontEndController extends Controller
 
     public function AddCartItem(Request $request)
     {
-        dd($request);
-        Cart::add($request->product_id, $request->title,$request->qty, $request->price,$request,
+        Cart::add($request->product_id, $request->title, $request->qty, $request->price,
         ['size'=>$request->size,'seller_id'=>$request->seller_id,'delivery_charges'=>$request->delivery_charges,'extras'=>$request->extras,'image_path'=> $request->image_path, 'title' => $request->title]);
-
         $totalPrice = Cart::subtotal();
         Session::put('totalPrice', $totalPrice);
-        // Session::Put('image_path',$image_path);
 
         Session::put('extras',$request->extras);
         return back()->with('success', 'Added To Cart Successfully');
