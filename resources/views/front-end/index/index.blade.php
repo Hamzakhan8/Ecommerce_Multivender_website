@@ -96,7 +96,7 @@
 							<strong style="color: crimson;">Mobile: </strong> {{$product->user->contact}}
 					    	</p> -->
 
-					    <a href="{{route('shop.products',$product->id)}}" class="btn btn-success">Visit Product</a>
+					    <a href="{{route('shop.product.details', $product->title)}}" class="btn btn-success">Visit Product</a>
 					  </div>
 					</div>
 
