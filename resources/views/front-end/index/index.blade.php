@@ -77,7 +77,7 @@
 
 				<div class="card">
 					<div class="bg-image hover-overlay ripple" data-ripple-color="light">
-						<a href="{{route('shop.products',$product->id)}}">
+						<a href="{{route('shop.product.details', $product->title)}}">
 							<img style=" width: auto; height: 200px;" src="{{asset('uploads/product/'.$product->image_path)}}" class="img-fluid" />
 					     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
 					    </a>
