@@ -91,7 +91,7 @@
 							</div>
 							<div class="card_area">
 								<textarea placeholder="Add Extra Details If You Need" class="form-control" name="extras"></textarea><br>
-								@if(Auth()->check() OR auth()->user()->id != $product->user_id)
+								@if(!Auth()->check() OR auth()->user()->id != $product->user_id)
 								<button type="submit" name="Submit" class="btn btn-info">Add To Cart</button>
 								@endif
 							</div>
