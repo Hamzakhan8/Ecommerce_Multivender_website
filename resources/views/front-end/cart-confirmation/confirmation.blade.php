@@ -49,7 +49,7 @@
 									<p> {{$cart->price}}</p>
 								</td>
 							</tr>
-							
+
 							@endforeach
 							<tr>
 								<td>
@@ -73,7 +73,7 @@
 									<p>{{Session::get('totalPrice')}}</p>
 								</td>
 							</tr>
-							
+
 							<tr>
 								<td>
 									<h4>Total</h4>
@@ -90,14 +90,14 @@
 
 					<form action="{{route('order.place')}} " method="post">
 						@csrf
-				
+
 					<textarea name="shipping_address" class="form-control col-md-5" placeholder="Please Enter Shipping Address Must" required></textarea>
-					
+
 				<br>
-	
+
 				<script
-				    src="https://checkout.stripe.com/checkout.js" class="stripe-button" 
-                    data-key="{{env('STRIPE_PUB_KEY','pk_test_QKqLlie4xGHhnYyI8KqEmhMr00pFa8lQ1l')}}"
+				    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="{{env('STRIPE_PUB_KEY','pk_test_51K3NIIAcehZZuafTtf9NQ6PZfGuNnYmHvbraQAqCUKxmin4bKDknYpnKAssVr6TdYGfpje3LjiiYefBlClZeKzDA00b6dHZEky')}}"
                     data-amount="{{Session::get('totalPrice')*100}}"
                     data-name="Checkout"
                     data-description="PLease fill up the form"
@@ -110,7 +110,7 @@
 					</form>
 				</div>
 			</div>
-			
+
 		</div>
 	</section>
 

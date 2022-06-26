@@ -142,7 +142,7 @@ class FrontEndController extends Controller
             'shipping_address' => 'required'
         ]);
 
-        Stripe::setApiKey(env('STRIPE_SECRET_KEY', 'sk_test_UiXMthbODOoySnaB2lz4WEgu00xJhQqFiE'));
+        Stripe::setApiKey(env('STRIPE_SECRET_KEY', 'sk_test_51K3NIIAcehZZuafTMTklTzp2xhUUybuUhqqE0C9OOxN3POXNmfHIAwYC8Y2jfZK4bZAwKX8i71qhwEyPa39nXQJZ00SS2ddkFh'));
         // u can do same as create([]) or create(array()) both are array
         $customer = Customer::create(array(
             'email' => $request->stripeEmail,
