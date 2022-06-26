@@ -122,7 +122,7 @@
 
 				<div class="bg-image hover-overlay ripple" data-ripple-color="light">
 						<a href="{{route('category.products',$category->name)}}">
-							<img src="/assets/img/banner/banner-3.jpg" class="img-fluid" />
+							<img src="/assets/img/banner/6.jpg" class="img-fluid" />
 					     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
 					    </a>
 					</div>
@@ -162,7 +162,7 @@
 					<div class="bg-image hover-overlay ripple" data-ripple-color="light">
 					    <!-- <img src="{{asset('storage/'.$user->image_path)}}" class="img-fluid" /> -->
 					    <a href="{{route('shop.products',$user->id)}}">
-							<img src="/assets/img/banner/banner-3.jpg" class="img-fluid" />
+							<img src="/assets/img/banner/5.jpg" class="img-fluid" />
 					     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
 					    </a>
 					</div>

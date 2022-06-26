@@ -26,7 +26,7 @@
 				<div class="card text-center">
 					<div class="bg-image hover-overlay ripple" data-ripple-color="light" style="max-height: 320px !important; overflow: hidden;">
 					    <!-- <img src="{{asset('storage/'.$user->image_path)}}" class="img-fluid" /> -->
-					    <img src="/assets/img/banner/banner-3.jpg" class="img-fluid" />
+					    <img src="/assets/img/banner/5.jpg" class="img-fluid" />
 					    <a href="#!">
 					     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
 					    </a>
