@@ -103,7 +103,7 @@ Route::post('shop/add-to-cart','FrontEndController@AddCartItem')->name('add.cart
 Route::get('shop/cart','FrontEndController@CartDetails')->name('cart.list')->middleware('auth');
 Route::get('shop/cart-update/{id}','FrontEndController@CartUpdate')->name('update.cart')->middleware('auth');
 Route::post('shop/apply-coupon','FrontEndController@ApplyCoupon')->name('apply.coupon')->middleware('auth');
-Route::get('shop/checkout', 'FrontEndController@Checkout')->name('checkout')->middleware('auth');
+Route::get('shop/checkout/{price}', 'FrontEndController@Checkout')->name('checkout')->middleware('auth');
 Route::post('shop/checkout/payment', 'FrontEndController@PlaceOrder')->name('order.place')->middleware('auth');
 Route::get('shop/order/self','FrontEndController@selfOrder')->name('order.self')->middleware('auth');
 

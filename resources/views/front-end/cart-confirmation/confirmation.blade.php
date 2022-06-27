@@ -38,6 +38,7 @@
 						</thead>
 						<tbody>
 							@foreach(Cart::content() as $cart)
+                            {{-- {{ dd($cart) }} --}}
 							<tr>
 								<td>
 									<p>{{$cart->name}}</p>
@@ -46,7 +47,12 @@
 									<h5>x {{$cart->qty}}</h5>
 								</td>
 								<td>
-									<p> {{$cart->price}}</p>
+                                    @if (Session::has('couponPrice'))
+									<p> {{ Session::get('couponPrice') }}</p>
+
+                                    @elseif (!Session::has('couponPrice'))
+									<p> {{ $cart->price }}</p>
+                                    @endif
 								</td>
 							</tr>
 
@@ -70,7 +76,12 @@
 									<h5></h5>
 								</td>
 								<td>
+                                    @if (Session::has('couponPrice'))
+									<p>{{ Session::get('couponPrice') + Session::get('shipping_price') }}</p>
+
+                                    @elseif (Session::has('totalPrice'))
 									<p>{{Session::get('totalPrice')}}</p>
+                                    @endif
 								</td>
 							</tr>
 
@@ -82,7 +93,11 @@
 									<h5></h5>
 								</td>
 								<td>
+                                    @if (Session::has('couponPrice'))
+									<p class="font-weight-bold">RS : {{ Session::get('couponPrice') + Session::get('shipping_price') }}</p>
+                                    @elseif (Session::has('totalPrice'))
 									<p class="font-weight-bold">RS : {{Session::get('totalPrice')}}</p>
+                                    @endif
 								</td>
 							</tr>
 						</tbody>
@@ -98,7 +113,14 @@
 				<script
 				    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                     data-key="{{env('STRIPE_PUB_KEY','pk_test_51K3NIIAcehZZuafTtf9NQ6PZfGuNnYmHvbraQAqCUKxmin4bKDknYpnKAssVr6TdYGfpje3LjiiYefBlClZeKzDA00b6dHZEky')}}"
-                    data-amount="{{Session::get('totalPrice')*100}}"
+                    @php
+                        $total = Session::get('couponPrice') + Session::get('shipping_price');
+                    @endphp
+                    @if (Session::has('couponPrice'))
+                        data-amount="{{ $total*100 }}"
+                        @elseif (Session::has('totalPrice'))
+                        data-amount="{{Session::get('totalPrice')*100}}"
+                    @endif
                     data-name="Checkout"
                     data-description="PLease fill up the form"
                     data-image="https://stripe.com/img/documentation/checkout/marketplace.png"

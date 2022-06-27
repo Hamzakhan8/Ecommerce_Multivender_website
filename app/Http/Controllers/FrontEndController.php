@@ -92,7 +92,7 @@ class FrontEndController extends Controller
     public function CartDetails()
     {
         // $products=Product::all();
-        return view('front-end.cart-details.add-to-cart',);
+        return view('front-end.cart-details.add-to-cart');
     }
     public function CartUpdate(Request $request , $id)
     {
@@ -115,23 +115,31 @@ class FrontEndController extends Controller
             $a = Cart::subtotal();
             $a = intval($a);
             $b = $coupon->price;
-            $totalPrice = $a - $b;
-            Session::put('totalPrice', $totalPrice);
-            return back()->with("success", "Coupon Code Applied Successfully");
+            $couponPrice = $a - $b;
+            Session::put('couponPrice', $couponPrice);
+
+            return view('front-end.cart-details.add-to-cart', compact('couponPrice'))
+            ->with("success", "Coupon Code Applied Successfully");
         }
     }
 
-    public function Checkout()
+    public function Checkout($price)
     {
-        $value = 200;
+        $value = 100;
         Session::put('shipping_price', $value);
 
         $a = Cart::subtotal();
         $a = (double)$a;
         $b = Session::get('shipping_price');
 
-        $totalPrice = $a + $b;
-        Session::put('totalPrice', $totalPrice);
+        if (empty($price) || $price == null) {
+
+            $totalPrice = $a + $b;
+            Session::put('totalPrice', $totalPrice);
+        }else {
+            $couponPrice = $price;
+            Session::put('couponPrice', $couponPrice);
+        }
 
         return view('front-end.cart-confirmation.confirmation');
     }

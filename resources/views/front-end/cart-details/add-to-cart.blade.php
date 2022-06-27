@@ -98,7 +98,11 @@
 			</div>
 
 				<div class="row ml-2 col-md-4 ">
-		<input type="text" disabled="" class="form-control" value="{{Session::get('totalPrice')}}">
+                    @if (!isset($couponPrice))
+                		<input type="text" disabled="" class="form-control" value="{{Session::get('totalPrice')}}">
+                        @elseif (isset($couponPrice))
+                		<input type="text" disabled="" class="form-control" value="{{Session::get('couponPrice')}}">
+                    @endif
 			</div>
 
 
@@ -112,7 +116,9 @@
 
 		<div class="row justify-content-center">
 			<div class="col">
-		<a class="main_btn ml btn-success" href="{{route('checkout')}}">Proceed to checkout</a>
+                @if (isset($couponPrice))
+                <a class="main_btn ml btn-success" href="{{route('checkout', $couponPrice)}}">Proceed to checkout</a>
+                @endif
 			</div>
 
 			<!-- <div class="col">
