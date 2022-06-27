@@ -132,7 +132,14 @@
 												<!-- <a class="reply_btn" href="#">Reply</a> -->
 											</div>
 										</div>
-										<p>{{$comment->comment}}</p>
+                                        <div class="delete_comment">
+										    <p>{{$comment->comment}}</p>
+                                            <span>
+                                                <a class="text-danger" href="{{ route('post.comment.delete', $comment->id) }}">
+                                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                                </a>
+                                            </span>
+                                        </div>
 									</div>
 									@endforeach
 								</div>

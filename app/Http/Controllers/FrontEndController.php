@@ -50,6 +50,14 @@ class FrontEndController extends Controller
 
         return back();//redirect back to the page it work as a page refresher
     }
+    public function destroyComment($id)
+    {
+        $comment = Comment::findOrFail($id);
+
+        $comment->delete();
+
+        return back();//redirect back to the page it work as a page refresher
+    }
 
     public function SearchProduct(Request $request)
     {

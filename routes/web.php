@@ -79,6 +79,7 @@ Route::get('hot/deals/{name}','FrontEndController@hotDeals')->name('hotDeals');
 Route::get('shop/subcategory/{name}','FrontEndController@SubCategoryProducts')->name('subcategory.products');
 Route::get('shop/prouct-details/{name}','FrontEndController@ProductDetails')->name('shop.product.details');
 Route::get('post/comment','FrontEndController@PostComment')->name('post.comment')->middleware('auth');
+Route::get('post/comment_delete/{id}','FrontEndController@destroyComment')->name('post.comment.delete')->middleware('auth');
 Route::get('search/product', 'FrontEndController@SearchProduct')->name('search.product');
 Route::get('view/all/gifts','FrontEndController@viewAllGifts')->name('ViewAllGifts');
 Route::get('contactUs','FrontEndController@contactUs')->name('contactUs');
