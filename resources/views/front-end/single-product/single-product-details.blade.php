@@ -90,10 +90,8 @@
 								</button>
 							</div>
 							<div class="card_area">
-								<textarea placeholder="Add Extra Details If You Need" class="form-control" name="extras"></textarea><br>
-								@if($product->user->role == 3)
+								@if(!Auth()->check() OR auth()->user()->id != $product->user_id)
 								<button type="submit" name="Submit" class="btn btn-info">Add To Cart</button>
-                                @elseif ($product->user->role == 2 && $product->user->role == 1)
 								@endif
 							</div>
 						</form>
