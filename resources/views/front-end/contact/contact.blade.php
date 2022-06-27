@@ -44,7 +44,7 @@
                         <div class="info_item">
                             <i class="lnr lnr-envelope"></i>
                             <h6>
-                                <a>ecommerce@gmail.com</a>
+                                <a>danyalkhanc3@gmail.com</a>
                             </h6>
                             <p>Send us your query anytime!</p>
                         </div>
