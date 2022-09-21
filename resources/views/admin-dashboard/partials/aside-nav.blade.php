@@ -26,7 +26,7 @@
             @if(auth()->user()->role=='1')
             <li><a href="{{route('user.index')}}"> <i class="icon-user"></i>Users </a></li>
             <!-- <li><a href="{{route('user.admins')}}"> <i class="icon-user"></i>Admin </a></li> -->
-            
+
             <li><a href="{{route('contact.index')}}"> <i class="icon-user"></i>Contact Us </a></li>
             <!-- <li><a href="{{route('hall.index')}}"> <i class="icon-user"></i>Event Halls </a></li> -->
 
@@ -34,13 +34,14 @@
             <!-- <li><a href="{{route('city.index')}}"> <i class="icon-grid"></i>City </a></li> -->
             <li><a href="{{route('category.index')}}"> <i class="icon-grid"></i>Category </a></li>
           <li><a href="{{route('subcategory.index')}}"> <i class="icon-grid"></i>Sub Category </a></li>
-           
+
             @endif
 
           @if(auth()->user()->role != 3)
           <li>
             <a href="{{route('product.index')}}"> <i class="fa fa-archive"></i>Products</a>
           </li>
+
           <li>
             <a href="{{route('coupon.index')}}"> <i class="icon-user"></i>Coupons </a>
           </li>
@@ -48,12 +49,12 @@
           <li>
             <a href="{{route('order.index')}}"> <i class="icon-user"></i>Orders </a>
           </li>
-          
-            
+
+
             <!-- the drop down item  -->
-            <!-- 
+            <!--
             <li>
-              <a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> 
+              <a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse">
                   <i class="icon-interface-windows"></i>
                       Example dropdown </a>
                     <ul id="exampledropdownDropdown" class="collapse list-unstyled ">

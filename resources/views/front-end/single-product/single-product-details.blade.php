@@ -70,6 +70,10 @@
 									<a class="active" >
 									<span>Contact</span> : {{$product->user->contact}}</a>
 								</li>
+                                <li>
+									<a class="active" >
+									<span>Address</span> : {{$product->user->address}}</a>
+								</li>
 							</ul>
 
 							<p class="mb-5">{{$product->description}}</p>
